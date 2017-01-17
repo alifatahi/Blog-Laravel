@@ -26,7 +26,7 @@
                               <h4>Contact Me</h4>
                               <form class="customform" action="" method="post">
                                  <div class="s-12"><input name="email" placeholder="Your e-mail" title="Your e-mail" type="email" /></div>
-                                 <div class="s-12"><input name="name" placeholder="Your name" title="Your name" type="text" /></div>
+                                 <div class="s-12"><input name="subject" placeholder="Subject" title="Your Subject" type="text" /></div>
                                  <div class="s-12"><textarea placeholder="Your massage" name="message" rows="5"></textarea></div>
                                  {{ csrf_field() }}
                                  <button type="submit">Submit Button</button>

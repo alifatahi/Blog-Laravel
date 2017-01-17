@@ -48,7 +48,3 @@ Route::post('signup',[
   'uses' => 'UserController@postSignup',
   'as'   => 'signup'
 ]);
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');

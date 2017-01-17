@@ -4,4 +4,4 @@
   {{ $bodyMessage }}
 </div>
 
-<p>Sent by:{{ $name }} and email is : {{ $email }}</p>
+<p>Sent by : {{ $email }}</p>
