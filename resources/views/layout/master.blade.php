@@ -25,7 +25,6 @@
 
    <body class="size-1140">
          @include('includes.header')
-         @include('includes.alert')
           <!-- MAIN SECTION -->
         <section id="article-section" class="line">
           <div class="margin">
@@ -33,6 +32,7 @@
             <div class="s-12 l-9">
             <!-- ARTICLE 1 -->
             <article class="margin-bottom">
+              @include('includes.alert')
               @yield('content')
             </article>
           </div>

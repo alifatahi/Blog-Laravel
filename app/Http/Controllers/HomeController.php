@@ -49,15 +49,15 @@ class HomeController extends Controller
           'bodyMessage' => $request->message
           );
 
+          
         Mail::send('pages.email', $data, function($message) use ($data){
           $message->from($data['email']);
           $message->to('test@test.com');
           $message->subject($data['subject']);
         });
 
-        Session::flash('success', 'Your Email was Sent!');
-
-        return redirect()->route('contact');
+        return redirect()->route('contact')->
+        with('success' , 'Your Message Is sent');
       }
 
 

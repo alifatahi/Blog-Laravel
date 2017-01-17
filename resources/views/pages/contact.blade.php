@@ -22,16 +22,30 @@
                               <p><i class="icon-facebook icon"></i> <a href="https://www.facebook.com/">Facebook</a></p>
                               <p class="margin-bottom"><i class="icon-twitter icon"></i> <a href="https://twitter.com/">Twitter</a></p>
                            </div>
-                           <div class="s-12 l-6">
-                              <h4>Contact Me</h4>
-                              <form class="customform" action="" method="post">
-                                 <div class="s-12"><input name="email" placeholder="Your e-mail" title="Your e-mail" type="email" /></div>
-                                 <div class="s-12"><input name="subject" placeholder="Subject" title="Your Subject" type="text" /></div>
-                                 <div class="s-12"><textarea placeholder="Your massage" name="message" rows="5"></textarea></div>
-                                 {{ csrf_field() }}
-                                 <button type="submit">Submit Button</button>
-                              </form>
-                           </div>
+             <div class="s-12 l-6">
+                <h4>Contact Me</h4>
+                <form class="customform" action="" method="post">
+                  @if($errors->has('email'))
+                  <span class="help-block">{{ $errors->first('email')}}</span>
+                  @endif
+                   <div class="s-12"><input name="email" placeholder="Your e-mail"
+                      title="Your e-mail" type="email"
+                      value="{{ Request::old('email') ?: ''}}" /></div>
+                   @if($errors->has('subject'))
+                   <span class="help-block">{{ $errors->first('subject')}}</span>
+                   @endif
+                   <div class="s-12"><input name="subject" placeholder="Subject"
+                      title="Your Subject" type="text"
+                      value="{{ Request::old('subject') ?: ''}}" /></div>
+                      @if($errors->has('message'))
+                      <span class="help-block">{{ $errors->first('message')}}</span>
+                      @endif
+                   <div class="s-12"><textarea placeholder="Your massage"
+                     name="message" rows="5">{{ Request::old('message') ?: ''}}</textarea></div>
+                   {{ csrf_field() }}
+                   <button type="submit">Submit Button</button>
+                </form>
+              </div>
                         </div>
                      </div>
                   </div>

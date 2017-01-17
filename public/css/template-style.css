@@ -366,3 +366,31 @@ address p {
   color: green;
   font-weight: bold;
 }
+
+.help-block{
+  color:red;
+}
+
+.info-box{
+  text-align: center;
+  margin: auto;
+  padding: 16px;
+  border-radius: 3px;
+  width: 350px;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px black;
+}
+
+.info-box.fail{
+  border: 1px solid #ff6b6a;
+  background-color: #ffc2ba;
+  color: #ff6b6a;
+
+
+}
+
+.info-box.success{
+  border: 1px solid #46cc71;
+  background-color: #bdffb6;
+  color: #46cc71;
+}
