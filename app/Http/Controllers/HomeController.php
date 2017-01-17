@@ -11,15 +11,25 @@ class HomeController extends Controller
 {
     public function getindex()
     {
-      $posts = Post::orderBy('created_at','desc')->paginate(5);
-        return view('pages.index',[
-          'posts' => $posts
-        ]);
+      $posts = Post::paginate(5);
+      foreach ($posts as $post) {
+        $post->body = $this->shortenText($post->body,30);
+      }
+     return view('pages.index',[
+       'posts'  => $posts
+     ]);
     }
 
     public function getPostIndex($post_id)
     {
-      return view('pages.post');
+      $post = Post::find($post_id);
+      if(!$post){
+        return redirect()->route('pages.index')->with(['fail' => 'Post Not Found']);
+      }
+      return view('pages.post',['post' => $post]);
+    }
+   public function getCreatePost(){
+     return view('admin.blog.create_post');
     }
 
     public function getContact()
@@ -49,5 +59,16 @@ class HomeController extends Controller
 
         return redirect()->route('contact');
       }
+
+
+      private function shortenText($text, $words_count){
+        if(str_word_count($text,0) > $words_count){
+          $words = str_word_count($text,2);
+          $pos = array_keys($words);
+          $text = substr($text,0,$pos[$words_count]) . "...";
+        }
+        return $text;
+      }
+
 
 }
