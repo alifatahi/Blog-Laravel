@@ -21,7 +21,23 @@
                         <h2>{{ $post->title }}</h2>
                      <p>
                        {{ $post->body }}
-                    </p>
+                    </p><br>
+                    <hr>
+
+     @if(Auth::check())
+        <div class="comment">
+          <form  action="" method="post">
+             <h4 style="color:green">What's Your Idea?</h4>
+             <textarea name="comment" rows="4" cols="40"></textarea><br>
+             <button type="button" name="button">Post</button>
+          </form>
+        </div>
+      @else
+
+      <div class="comment">
+        <h4 style="color:red">Please SignUp To add Comment</h4>
+      </div>
+      @endif
                   </div>
 
 @stop
