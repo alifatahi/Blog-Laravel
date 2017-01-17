@@ -35,7 +35,7 @@
       @else
 
       <div class="comment">
-        <h4 style="color:red">Please SignUp To add Comment</h4>
+        <a href="{{ route('signup')}}"><h4 style="color:red">Please SignUp To add Comment</h4></a>
       </div>
       @endif
                   </div>

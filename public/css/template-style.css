@@ -394,3 +394,29 @@ address p {
   background-color: #bdffb6;
   color: #46cc71;
 }
+.search{
+  margin-left: 720px;
+  padding: 10px;
+
+}
+
+.search .se-in{
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.search .se-btn{
+  width: 70px;
+  height: 30px;
+  color: red;
+  font-weight: bold;
+  font-size: 17px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.search .se-btn:hover{
+  background-color: #c4c4c4;
+
+}

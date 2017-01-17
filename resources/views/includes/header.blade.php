@@ -35,6 +35,12 @@
 
                      </div>
                   </ul>
+                  <div class="search">
+                    <form  action="" method="post">
+                      <input type="text" name="search" class="se-in">
+                      <input type="button" value="Search" class="se-btn">
+                    </form>
+                  </div>
                </div>
             </nav>
          </div>
