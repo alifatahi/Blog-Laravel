@@ -1,5 +1,5 @@
 <!-- SIDEBAR -->
-@if(Auth::check())
+
 <div class="s-12 l-3">
    <aside>
       <!-- NEWS 1 -->
@@ -15,5 +15,3 @@
 
    </aside>
 </div>
-
-@endif

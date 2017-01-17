@@ -11,7 +11,7 @@
                 </a>
                   <h1>Best Web Developing News and Open Source Project</h1>
                   <ul class="top-ul right">
-                    @if(Auth::check())
+
                      <li>
                         <a href="{{route('index')}}">Blog</a>
                      </li>
@@ -22,9 +22,9 @@
                         <a href="{{route('contact')}}">Contact</a>
                      </li>
                      <li>
-                        <a href="{{route('user')}}">User Panel</a>
+                        <a href="{{route('user')}}">SignUp</a>
                      </li>
-                     @endif
+
                      <div class="social right">
                         <a target="_blank" href="https://www.facebook.com/">
                         <i class="icon-facebook_circle icon2x"></i>
